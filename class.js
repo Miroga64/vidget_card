@@ -8,28 +8,25 @@ class Form{
                 <div>
                 <div class="form__field">
                     <span class="textinput">
-                    <!-- type="email" чтобы показать вывод ошибки -->
-                    <input name="card-data" type="number" class="textinput-control" id="card-data" placeholder="Номер карты">
-                    <label for="name" class="registration__label">Номер карты</label>
+                    <input name="card-data" inputmode="numeric" class="textinput-control" id="card-data" placeholder="Номер карты" pattern="^[0-9]{16}$">
+                    <label for="card-data" class="registration__label">Номер карты</label>
                     <label class="registration__invalid">Неверный номер карты</label>
                     </span>
-                </div>
-                <div class="form__field">
                     <span class="textinput">
-                    <input name="card-validity"  type="text" class="textinput-control" id="card-validity" placeholder="ММ / ГГ">
-                    <label for="password" class="registration__label">ММ / ГГ</label>
+                    <input name="card-validity" class="textinput-controlMini" id="card-validity" placeholder="ММ/ГГ" pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$">
+                    <label for="card-validity" class="registration__label">ММ/ГГ</label>
+                    <label class="registration__invalid">Неверная дата</label>
                     </span>
                 </div>
                 <div class="form__field">
                     <span class="textinput">
-                    <input name="card-name"  type="text" class="textinput-control" id="card-name" placeholder="Имя владельца">
-                    <label for="password" class="registration__label">Имя владельца</label>
+                    <input name="card-name" type="text" class="textinput-control" id="card-name" placeholder="Имя владельца" pattern="^(?:[A-Za-z]+ ?){1,3}$">
+                    <label for="card-name" class="registration__label">Имя владельца</label>
                     </span>
-                </div>
-                <div class="form__field">
                     <span class="textinput">
-                    <input name="card-code"  type="password" class="textinput-control" id="card-code" placeholder="CVV">
-                    <label for="password" class="registration__label">CVV</label>
+                    <input name="card-code" type="number" inputmode="numeric" type="password" class="textinput-controlMini" id="card-code" placeholder="CVV" pattern="^[0-9]{3}$">
+                    <label for="card-code" class="registration__label">CVV</label>
+                    <label class="registration__invalid">Неверный CVV</label>
                     </span>
                 </div>
                 </div>
