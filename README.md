@@ -1,1 +1,0 @@
-# vidget_card
